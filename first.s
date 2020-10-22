@@ -11,7 +11,7 @@ __main  function
 	   VMOV.F32	 S5,S30   ;Final value after each iteration is stored in S5
 	   
 LOOP   VDIV.F32	S6,S3,S2  ;Division operation for (x/2 , (x^2)/3 , .....)
-	   VFMS.F32	S5,S4,S6  ;Calculate new iteration value (S5 = S5 - (S3*S6)) 
+	   VFMS.F32	S5,S4,S6  ;Calculate new iteration value (S5 = S5 - (S4*S6)) 
 	   VADD.F32	S2,S1  ;Calculation of denominator Value of 3,4,5 .....
 	   VNMUL.F32 S3,S4  ;
 	   SUB		R2,#1   ;Decrementing iteration value
