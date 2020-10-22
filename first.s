@@ -6,8 +6,8 @@ __main  function
 	      MOV R2,#10 ;Counter variable for no of iterations
            VLDR.F32      S1, = 1   ;S1 and S2 to calculate the denominator value of 2,3,4 etc.,
            VLDR.F32      S2, = 2   ;
-	   VMOV.F32	 S3,S30   ;Copying x to S1
-	   VMOV.F32	 S4,S30   ;Copying x to S1
+	   VMOV.F32	 S3,S30   ;Copying x to S3
+	   VMOV.F32	 S4,S30   ;Copying x to S4
 	   VMOV.F32	 S5,S30   ;Final value after each iteration is stored in S5
 	   
 LOOP   VDIV.F32	S6,S3,S2  ;Division operation for (x/2 , (x^2)/3 , .....)
